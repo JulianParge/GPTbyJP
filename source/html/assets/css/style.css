@@ -37,15 +37,15 @@ html {
     left:0;
     right:0;
     background:#efefef;
-    padding:30px;
 }
 
 /* Chat form */
-#chat-form, .chat-user, .chat-bot {
+#chat-form, .chat-user, .chat-bot, .page {
     position:relative;
     width:100%;
     max-width:900px;
     margin:0 auto;
+    padding:15px;
 }
 
 #chat-form input {
@@ -65,7 +65,7 @@ html {
     line-height:50px;
     text-align: center;
     position:absolute;
-    right:0;
+    right:15px;
     bottom:50%;
     margin-bottom:-25px;
     color:#333;
@@ -91,13 +91,14 @@ html {
 
 /* Chat bot status */
 #chat-bot-status {
-    display:none;
+    display: none;
     font-weight: bold;
-    opacity:1;
+    opacity: 1;
     animation: fade 2s linear infinite;
     position: absolute;
-    left:30px;
-    top:-30px;
+    left: 40px;
+    top: -25px;
+    color: #c71c17;
 }
 
 @keyframes fade {
