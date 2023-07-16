@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    www:
+      build:
+        context: ..
+        dockerfile: ./dev/Dockerfile
+      container_name: GPTbyJP
+      ports:
+        - "80:80"
+      volumes:
+        - ../source:/var/www
+      env_file:
+        - .env

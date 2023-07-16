@@ -1,0 +1,106 @@
+/* General */
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+    color:#333;
+    margin:0;
+    padding:0;
+    width:100%;
+    position:relative;
+    line-height: 23px;
+    font-size: 16px;
+}
+
+html {
+    background:#efefef;
+}
+
+/* Containers */
+.container {
+    width:100%;
+    margin:0;
+    padding:0;
+    height:100vh;
+}
+
+#chat-container {
+    padding-bottom:80px;
+}
+
+#chat-form-container {
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#efefef;
+    padding:30px;
+}
+
+/* Chat form */
+#chat-form, .chat-user, .chat-bot {
+    position:relative;
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+}
+
+#chat-form input {
+    width:100%;
+    padding:20px;
+    border-radius:15px;
+    background:#fafafa;
+    border:none;
+    outline:none;
+}
+
+#chat-send {
+    border:none;
+    background: none;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align: center;
+    position:absolute;
+    right:0;
+    bottom:50%;
+    margin-bottom:-25px;
+    color:#333;
+}
+
+#chat-send.disabled {
+    color:#ddd
+}
+
+/* Chat wraps */
+.chat-bot-wrap, .chat-user-wrap {
+    width:100%;
+    padding: 40px 20px;
+}
+
+.chat-bot-wrap {
+    background: #efefef;
+}
+
+.chat-user-wrap {
+    background: #fafafa;
+}
+
+/* Chat bot status */
+#chat-bot-status {
+    display:none;
+    font-weight: bold;
+    opacity:1;
+    animation: fade 2s linear infinite;
+    position: absolute;
+    left:30px;
+    top:-30px;
+}
+
+@keyframes fade {
+    0%,100% { opacity:0; }
+    50% { opacity: 1; }
+}
