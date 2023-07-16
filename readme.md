@@ -11,11 +11,11 @@ For the purposes of this project, I am using the `gpt-4` model. This can also be
 **Prerequisites**
 -
 - An OpenAI key
-- - https://platform.openai.com/account/api-keys
+   - https://platform.openai.com/account/api-keys
 - Docker desktop (for development and local deployment) 
-- - https://www.docker.com/products/docker-desktop/
+  - https://www.docker.com/products/docker-desktop/
 - A DigitalOcean account (for production and deployment to a custom domain) 
-- - https://m.do.co/c/0d7925eba36e (this is my DO referral link)
+  - https://m.do.co/c/0d7925eba36e (this is my DO referral link)
 
 
 **Instructions to deploy locally**
@@ -42,7 +42,7 @@ For the purposes of this project, I am using the `gpt-4` model. This can also be
 - Edit the `Plan` under `Billing` according to your needs (`Basic` works fine)
 - Click `Create Resources` and wait for the build to complete
 - Once deployed, go to the `Settings` tab and add your domain under `Domains`
-- - It is strongly recommended to allow DigitalOcean to manage the domain, and you just set the nameservers to ns1.digitalocean.com, ns2., etc. 
+  - It is strongly recommended to allow DigitalOcean to manage the domain, and you just set the nameservers to ns1.digitalocean.com, ns2., etc. 
 
 And that's it, you now have a local development environment and a production environment for a custom ChatGPT bot.
 
