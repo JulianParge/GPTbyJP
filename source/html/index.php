@@ -5,10 +5,10 @@ require_once('../config/config.php');
 
 $route = $_GET['route'] ?? DEFAULT_PAGE;
 
-// Sanitize the route to prevent XSS and SQL injection
+// sanitize the route
 $route = preg_replace("/[^a-zA-Z0-9_\-]/", "", $route);
 
-// Prepare file paths
+// prepare file paths
 $includeFilePath = INCLUDES_PATH . "/${route}.php";
 $functionsFilePath = FUNCTIONS_PATH . "/${route}.php";
 $handlersFilePath = HANDLERS_PATH . "/${route}.php";
@@ -33,11 +33,13 @@ if ($_POST) {
 
 // show template file
 else {
-    require_once (TEMPLATES_PATH . "/header.php");
-
-    if (file_exists($templatesFilePath)) {
-        require_once($templatesFilePath);
+    // check if the template file does not exist
+    if (!file_exists($templatesFilePath)) {
+        // then change the template file to 404
+        http_response_code(404);
+        $templatesFilePath = TEMPLATES_PATH . "/404.php";
     }
-
+    require_once (TEMPLATES_PATH . "/header.php");
+    require_once($templatesFilePath);
     require_once (TEMPLATES_PATH . "/footer.php");
 }
