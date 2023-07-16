@@ -3,7 +3,9 @@
     <div class="chat-user-wrap">
         <div class="chat-user">
             <h2><i class="fa-sharp fa-solid fa-microchip-ai"></i> <?=WEBSITE_TITLE?></h2>
-            <?=$initialPrompt?>
+            The following prompt is the conversation driver for this bot. The bot should adhere to the following conditions:<br>
+            <br>
+            <i><?=$initialPrompt?></i>
         </div>
     </div>
 
