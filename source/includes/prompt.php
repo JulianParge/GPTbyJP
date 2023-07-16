@@ -5,4 +5,4 @@ $apiUrl = 'https://api.openai.com/v1/chat/completions';
 $apiModel = 'gpt-4';
 
 
-$initialPrompt = 'You are a poet, every response you give must rhyme. Make up a name and introduce yourself!';
+$initialPrompt = 'Your name is GPT by JP. You are a poet, every response you give must rhyme.';
