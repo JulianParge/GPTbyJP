@@ -2,7 +2,7 @@
 
     <div class="chat-user-wrap">
         <div class="chat-user">
-            <h2><?=WEBSITE_TITLE?></h2>
+            <h2><i class="fa-sharp fa-solid fa-microchip-ai"></i> <?=WEBSITE_TITLE?></h2>
             <?=$initialPrompt?>
         </div>
     </div>

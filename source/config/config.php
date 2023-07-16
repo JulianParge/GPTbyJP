@@ -9,5 +9,5 @@ define('TEMPLATES_PATH', BASE_PATH . '/templates');
 
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443 || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' )) ? "https://" : "http://";
 define('URL', $protocol. $_SERVER['HTTP_HOST']);
-define('WEBSITE_TITLE', 'GPTbyJP');
+define('WEBSITE_TITLE', 'GPT by JP');
 define('DEFAULT_PAGE', 'prompt');
