@@ -50,7 +50,7 @@ html {
 
 #chat-form input {
     width:100%;
-    padding:20px;
+    padding:20px 50px 20px 20px;
     border-radius:15px;
     background:#fafafa;
     border:none;
