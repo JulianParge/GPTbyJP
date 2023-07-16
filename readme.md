@@ -4,7 +4,9 @@ This is a simple procedural framework for you to deploy your own ChatGPT bot
 both locally and to your own domain. This project is purely for demonstration purposes and 
 to help new developers understand how an OpenAI integration can work in PHP (via `curl`) using Docker.
 
-The bot is driven by an initial prompt, which you can set in the `/includes/prompt.php` file.
+The bot is driven by an initial prompt, which you can set in the `/includes/prompt.php` file. 
+
+For the purposes of this project, I am using the `gpt-4` model. This can also be updated in the `/includes/prompt.php` file.
 
 **Prerequisites**
 -
