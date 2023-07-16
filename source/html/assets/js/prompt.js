@@ -19,6 +19,7 @@ $(document).ready(function(){
     function generateChat() {
         var chatData = $chatInput.val();
         $chatContainer.append('<div class="chat-user-wrap"><div class="chat-user chat">'+chatData+'</div></div>');
+        $("html, body").animate({ scrollTop: $(document).height() }, 500);
         $chatInput.val('');
         $('#chat-bot-status').show();
 
@@ -29,6 +30,7 @@ $(document).ready(function(){
             dataType: "json",
             success: [ function(data) {
                 $chatContainer.append('<div class="chat-bot-wrap"><div class="chat-bot chat">'+data.response+'</div></div>');
+                $("html, body").animate({ scrollTop: $(document).height() }, 500);
                 $('#chat-bot-status').hide();
             } ]
         });
@@ -43,7 +45,7 @@ $(document).ready(function(){
 
     // toggle send availability
     function sendToggle() {
-        var isDisabled = $chatInput.val().length <= 1;
+        var isDisabled = $chatInput.val().trim().length === 0;
         $chatSend.toggleClass('disabled', isDisabled).prop('disabled', isDisabled);
     }
 
