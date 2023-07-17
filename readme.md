@@ -57,9 +57,6 @@ You might even exclude the entire `/dev` folder and set your cloned repo to `pri
 **php.ini differences in dev and prod**
 - Error reporting is disabled in prod
 - `phpinfo()` is disabled in prod
-- `short_open_tags` is `On` in both prod and dev. I use this to easily add variables and constants into the template files. 
-You can disable it but be sure to update the files in `/templates`
-
 
 If you're going to build on this framework, you could (and probably should) have a `dev_source` and a `prod_source`, 
 in that case just update the Dockerfiles to `COPY` the right source folder, and update the `docker-compose.yml` in 
