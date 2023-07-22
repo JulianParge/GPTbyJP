@@ -2,7 +2,7 @@ FROM php:8.0-apache
 
 # update, upgrade, and clean
 RUN apt-get update && \
-    apt-get upgrade && \
+    apt-get upgrade -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
