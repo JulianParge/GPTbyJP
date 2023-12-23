@@ -1,7 +1,7 @@
 <?php
 
 $apiKey = getenv('OPENAI_API_KEY',true) ?: getenv('OPENAI_API_KEY');
-$apiUrl = 'https://api.openai.com/v1/engines/gpt-4/completions';
+$apiUrl = 'https://api.openai.com/v1/chat/completions';
 $apiModel = 'gpt-4';
 
 
