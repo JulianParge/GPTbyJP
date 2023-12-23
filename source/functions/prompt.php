@@ -40,21 +40,25 @@ function apiCall($data)
 
 function requestGptResponse($messages)
 {
+    global $apiModel;
+
     $data = [
+        'model' => $apiModel,
         'messages' => $messages
     ];
 
     $apiResponse = apiCall($data);
 
-    // Check for errors or return the response
+    // check for errors or return the response
     if (isset($apiResponse['choices'][0]['message']['content'])) {
         $outputText = $apiResponse['choices'][0]['message']['content'];
     } else {
-        $outputText = "Error: ".print_r($apiResponse, true);
+        $outputText = "Error: ".print_r($apiResponse,true);
     }
 
-    // Turn line breaks into <br>
+    // turn line breaks into <br>
     return nl2br($outputText);
+
 }
 
 function generatePrompt($thePrompt, $theContext)
